@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: hannosoloazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hannosoloazchcaptureorder 
+    spec:
+      containers:
+        - name: hannosoloazchcaptureorder 
+          image: hannocreg.azurecr.io/hannosoloazchcaptureorder
+          ports:
+          - containerPort: 8080
