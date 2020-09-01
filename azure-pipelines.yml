@@ -1,4 +1,10 @@
 variables:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AKS create SP'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az aks create -g myResourceGroup -n myManagedCluster --enable-managed-identity --network-plugin azure'
   
   - group: captureorder-variables # Variable Group containing 'mongoHost', 'mongoUser' and the secret 'mongoPassword'
 
