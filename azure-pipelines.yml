@@ -1,4 +1,3 @@
-variables:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'AKS create SP'
